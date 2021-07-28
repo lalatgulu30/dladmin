@@ -1,0 +1,285 @@
+import "./SearchUser.css";
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
+function SearchUser() {
+  const [userId, setUserId] = useState("");
+
+  const searchUser = () => {
+    Axios.post("http://localhost:3002");
+  };
+  return (
+    <div>
+      <table className="search-user">
+        <thead>
+          <b>Search User</b>
+        </thead>
+        <br />
+        <label>
+          Last name or User Id is required to search for a user.
+          <br />
+          Business name is required to search for a business.
+          <br />
+          Zip code and/or phone number can be used to search for user or
+          business.
+        </label>
+        <br />
+        <br />
+        <div className="search-criteria">
+          <p>
+            <b>Search Criteria</b>
+          </p>
+        </div>
+        <div>
+          <table>
+            <tr>
+              <td>
+                <label>Last Name </label>
+              </td>
+              <td>
+                <input type="text"></input>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>First Name </label>
+              </td>
+              <td>
+                <input type="text"></input>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>E-Mail Address </label>
+              </td>
+              <td>
+                <input type="text"></input>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>User ID </label>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="userid"
+                  onChange={(e) => {
+                    setUserId(e.target.value);
+                  }}
+                ></input>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Enterprise ID </label>
+              </td>
+              <td>
+                <input type="text"></input>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Business Name </label>
+              </td>
+              <td>
+                <input type="text"></input>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Zip or Postal Code </label>
+              </td>
+              <td>
+                <input type="text"></input>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Phone Number </label>
+              </td>
+              <td>
+                <input type="text"></input>
+              </td>
+              <td>
+                <label>Ext </label>
+              </td>
+              <td>
+                <input type="text"></input>
+              </td>
+            </tr>
+            <tr>
+              <input type="button" value="Search" onClick={searchUser} />
+              <button>Clear</button>
+            </tr>
+          </table>
+        </div>
+      </table>
+    </div>
+  );
+}
+export default SearchUser;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/ const db = mysql.createConnection({
+//   user: "root",
+//   host: "localhost",
+//   password: "password",
+//   database: "de-admin",
+// });
+// app.post("/deladmin/pages/searchAccount", (req, res) => {
+//   const userid = req.body.userid;
+//   const username = req.body.username;
+
+//   db.query("select * from deladmin where userid= ?"),
+//     [userid],
+//     (err, result) => {
+//       if (err) {
+//         res.send({ err: err });
+//       } else {
+//         if (result) {
+//           res.send(result);
+//         } else {
+//           res.send({ message: "No user details found" });
+//         }
+//       }
+//     };
+// });
+
+// app.get("/", (req, res) => {
+//   res.send("Hello World!");
+// });
+
+
+
+
+
+const express = require("express");
+const app = express();
+const port = 3000;
+// const mysql = require("mysql");
+
+// app.use(express.json());
+
+app.get('/',(req,res)=>{
+res.send("hii");
+})
+
+
+app.listen(port, () => {
+  console.log(`running on port ${port}`);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  db.query("SELECT * FROM DELADMIN WHERE userid=?", [userid], (err, result) => {
+    if (err) {
+      res.send(err);
+    } else {
+      if (result) {
+        res.send(result);
+      } else {
+        res.send({ message: "all wrong" });
+      }
+    }
+  });
