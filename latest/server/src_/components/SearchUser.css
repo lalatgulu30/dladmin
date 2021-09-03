@@ -1,0 +1,23 @@
+.search-user {
+  border-color: black;
+  border-width: 0.2rem;
+  border-style: solid;
+  width: fit-content;
+}
+.search-criteria {
+  width: 100%;
+  background-color: rgb(199, 198, 198);
+}
+.search-criteria-paragraph {
+  width: 100%;
+}
+.label-td {
+  text-align: right;
+  width: 155px;
+}
+.search-table{
+    padding-top: 10px;
+}
+.ext-td {
+    text-align: right;
+  }

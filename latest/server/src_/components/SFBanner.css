@@ -1,0 +1,24 @@
+.sf-banner {
+    background-color: #d30808;
+    height: 3rem;
+    padding: 0.5rem;
+    
+    position: relative;
+    align-items: center;
+  }
+  .sf-font{
+    font-size: 1.8rem;
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .sf-b2b-font{
+    font-size: 1.2rem;
+    color: white;
+    font-style: normal;
+  }
+.sf-banner-logout{
+  color: white;
+  font-size: 0.8rem;
+  margin: 10rem;
+}
